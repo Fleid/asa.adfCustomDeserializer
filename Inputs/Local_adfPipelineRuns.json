@@ -1,0 +1,10 @@
+{
+    "InputAlias": "adfPipelineRuns",
+    "Type": "Data Stream",
+    "Format": "CustomClr",
+    "SerializationProjectPath": "..\\adfPipelineRunDeserializer\\adfPipelineRunDeserializer.csproj",
+    "SerializationClassName": "adfPipelineRunDeserializer.adfPipelineRunDeserializer",
+    "SerializationDllPath": "adfPipelineRunDeserializer.dll",
+    "FilePath": "sample_adflogs.json",
+    "ScriptType": "InputMock"
+}

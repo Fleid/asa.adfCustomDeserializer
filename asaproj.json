@@ -1,0 +1,46 @@
+{
+    "name": "adfdiagnosticlogs",
+    "startFile": "adfdiagnosticlogs.asaql",
+    "configurations": [
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Inputs/Local_adfActivityRuns.json",
+            "subType": "InputMock"
+        },
+        {
+            "filePath": "Inputs/Local_adfPipelineRuns.json",
+            "subType": "InputMock"
+        },
+        {
+            "filePath": "Inputs/Local_adfTriggerRuns.json",
+            "subType": "InputMock"
+        },
+        {
+            "filePath": "Inputs/adfActivityRuns.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Inputs/adfPipelineRuns.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Inputs/adfTriggerRuns.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Outputs/adfActivityRunsOutEH.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/adfPipelineRunsOutEH.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/adfTriggerRunsOutEH.json",
+            "subType": "Output"
+        }
+    ]
+}

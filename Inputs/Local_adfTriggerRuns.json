@@ -1,0 +1,10 @@
+{
+    "InputAlias": "adfTriggerRuns",
+    "Type": "Data Stream",
+    "Format": "CustomClr",
+    "SerializationProjectPath": "..\\adfTriggerRunDeserializer\\adfTriggerDeserializer.csproj",
+    "SerializationClassName": "adfTriggerRunDeserializer.adfTriggerRunDeserializer",
+    "SerializationDllPath": "adfTriggerDeserializer.dll",
+    "FilePath": "sample_adflogs.json",
+    "ScriptType": "InputMock"
+}

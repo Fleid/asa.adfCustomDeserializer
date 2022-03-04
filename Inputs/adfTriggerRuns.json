@@ -1,0 +1,22 @@
+{
+    "Name": "adfTriggerRuns",
+    "Type": "Data Stream",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "eh-fleide-adflog",
+        "EventHubName": "adf-fleide-adflog-logs",
+        "SharedAccessPolicyName": "RootManageSharedAccessKey",
+        "SharedAccessPolicyKey": null,
+        "ConsumerGroupName": "asa_trigger_runs",
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": "f083f329-af21-442c-be2f-ece649770b48.StreamAnalystics",
+    "Serialization": {
+        "Type": "CustomClr",
+        "SerializationProjectPath": "..\\adfTriggerRunDeserializer\\adfTriggerDeserializer.csproj",
+        "SerializationClassName": "adfTriggerRunDeserializer.adfTriggerRunDeserializer",
+        "SerializationDllPath": "adfTriggerDeserializer.dll"
+    },
+    "PartitionKey": null,
+    "ScriptType": "Input"
+}

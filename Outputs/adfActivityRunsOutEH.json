@@ -1,0 +1,20 @@
+{
+    "Name": "adfActivityRunsOutEH",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "eh-fleide-adflog",
+        "EventHubName": "eh-fleide-adflog-activityrunsout",
+        "SharedAccessPolicyName": "RootManageSharedAccessKey",
+        "SharedAccessPolicyKey": null,
+        "PartitionKey": "",
+        "PropertyColumns": [],
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": "8054e900-e6b9-46db-8147-6dce5c794d63.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8",
+        "Format": "LineSeparated"
+    },
+    "ScriptType": "Output"
+}

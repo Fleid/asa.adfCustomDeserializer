@@ -1,0 +1,22 @@
+{
+    "Name": "adfActivityRuns",
+    "Type": "Data Stream",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "eh-fleide-adflog",
+        "EventHubName": "adf-fleide-adflog-logs",
+        "SharedAccessPolicyName": "RootManageSharedAccessKey",
+        "SharedAccessPolicyKey": null,
+        "ConsumerGroupName": "asa_activity_runs",
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": "c48260e7-611f-4762-8dae-4ac8ace055ee.StreamAnalystics",
+    "Serialization": {
+        "Type": "CustomClr",
+        "SerializationProjectPath": "..\\adfActivityRunDeserializer\\adfActivityRunDeserializer.csproj",
+        "SerializationClassName": "adfActivityRunDeserializer.adfActivityRunDeserializer",
+        "SerializationDllPath": "adfActivityRunDeserializer.dll"
+    },
+    "PartitionKey": null,
+    "ScriptType": "Input"
+}

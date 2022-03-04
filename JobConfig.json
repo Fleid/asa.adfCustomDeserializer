@@ -1,0 +1,25 @@
+{
+    "ScriptType": "JobConfig",
+    "DataLocale": "en-US",
+    "OutputErrorPolicy": "Retry",
+    "EventsLateArrivalMaxDelayInSeconds": 5,
+    "EventsOutOfOrderMaxDelayInSeconds": 0,
+    "EventsOutOfOrderPolicy": "Adjust",
+    "StreamingUnits": 3,
+    "CompatibilityLevel": "1.2",
+    "UseSystemAssignedIdentity": false,
+    "GlobalStorage": {
+        "AccountName": "safleideasatest",
+        "AccountKey": null,
+        "AuthenticationMode": "ConnectionString"
+    },
+    "ContentStoragePolicy": "SystemAccount",
+    "CustomCodeStorage": {
+        "AccountName": "safleideasatest",
+        "AccountKey": null,
+        "ContainerName": "asacustomcodestorage",
+        "Path": "UserCustomCode.zip"
+    },
+    "DataSourceCredentialDomain": "c20e8fb7-ecab-4737-85d6-f5e79d16a424.StreamAnalystics",
+    "Tags": {}
+}

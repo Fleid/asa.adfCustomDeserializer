@@ -1,0 +1,37 @@
+
+/*
+This project is set up to use JSON custom deserializers that will read from an Azure Data Factory diagnostic logs (event hub).
+The schema mapping is static, it needs to be updated in each .cs files via the event class definition.
+
+See README.md for prerequisites.
+
+Once done, the shortest way to run the query is to run the following commands in a terminal:
+cd xxxDeserializer
+dotnet restore
+dotnet build
+
+Then in this query, start a local run on local input.
+*/
+
+-- This is not like the built-in deserializers where we can still access the other fields of mismatched events
+-- Here they are lost in the custom deserializer, so we need one deserializer for each schema on the wire
+
+WITH
+activityRuns AS (SELECT * FROM adfActivityRuns),
+pipelineRuns AS (SELECT * FROM adfPipelineRuns),
+triggerRuns AS (SELECT * FROM adfTriggerRuns)
+
+SELECT
+	*
+INTO adfActivityRunsOutEH
+FROM activityRuns
+
+SELECT
+	*
+INTO adfPipelineRunsOutEH
+FROM pipelineRuns
+
+SELECT
+	*
+INTO adfTriggerRunsOutEH
+FROM triggerRuns
