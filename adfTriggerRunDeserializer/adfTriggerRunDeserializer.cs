@@ -23,11 +23,21 @@ public class adfTriggerRunDeserializer : StreamDeserializer<AdfTriggerRun>
         {
             using (var streamReader = new StreamReader(stream))
             {
-                // each event is sent via a stream - this is not a continuous stream of events - so we can read it entirely
-                string payload = streamReader.ReadToEnd();
+                var customEvent = new CustomEvent();
 
-                // this specific schema encapsulate activities in a top level array called records
-                var customEvent = JsonConvert.DeserializeObject<CustomEvent>(payload);
+                try {
+                    // each event is sent via a stream - this is not a continuous stream of events - so we can read it entirely
+                    string payload = streamReader.ReadToEnd();
+                    // this specific schema encapsulate activities in a top level array called records
+                    customEvent = JsonConvert.DeserializeObject<CustomEvent>(payload);
+                }
+                catch(Exception e){
+                    this.streamingDiagnostics.WriteError(
+                        briefMessage: "Custom deserializer - ADF Any Runs - Unable to open stream as JSON: top level should be a single array named `records` of any kind of runs",
+                        detailedMessage: e.Message);
+                    throw;
+                }
+
                 foreach (AdfTriggerRun triggerRun in customEvent.Records){
                     if (triggerRun.TriggerId is not null) {
                         //This is really an activity, we can output, else we discard
