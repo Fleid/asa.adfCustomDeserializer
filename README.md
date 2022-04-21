@@ -1,6 +1,6 @@
 # Readme
 
-## How to set up VS Code and the project to build a custom deserializer locally
+## How to set up VS Code and the project to build a NEW custom deserializer locally
 
 The [original doc](https://docs.microsoft.com/en-us/azure/stream-analytics/visual-studio-code-custom-deserializer) lists the necessary steps:
 

@@ -40,7 +40,7 @@ public class adfActivityRunDeserializer : StreamDeserializer<AdfActivityRun>
                 if (adfActivityRunInputPayload is not null) { // Payload was deserialized successfully
                     if (adfActivityRunInputPayload.Records is not null){ // There is a top level array named records, else we discard
                         foreach (AdfActivityRun activityRun in adfActivityRunInputPayload.Records){
-                            if (activityRun.ActivityRunId is not null) { // In the array, this item is an activity, else we discard
+                            if (activityRun.ActivityRunId != string.Empty) { // In the array, this item is an activity, else we discard
                                 yield return activityRun;
                             }
                         }
