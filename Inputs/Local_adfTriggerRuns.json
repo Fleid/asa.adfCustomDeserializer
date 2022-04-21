@@ -2,9 +2,9 @@
     "InputAlias": "adfTriggerRuns",
     "Type": "Data Stream",
     "Format": "CustomClr",
-    "SerializationProjectPath": "..\\adfTriggerRunDeserializer\\adfTriggerDeserializer.csproj",
-    "SerializationClassName": "adfTriggerRunDeserializer.adfTriggerRunDeserializer",
-    "SerializationDllPath": "adfTriggerDeserializer.dll",
+    "SerializationProjectPath": "..\\adfLogsCustomDeserializer\\adfLogsCustomDeserializer.csproj",
+    "SerializationClassName": "adfLogsCustomDeserializer.adfTriggerRunDeserializer",
+    "SerializationDllPath": "adfLogsCustomDeserializer.dll",
     "FilePath": "sample_adflogs.json",
     "ScriptType": "InputMock"
 }

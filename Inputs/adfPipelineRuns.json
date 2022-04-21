@@ -13,9 +13,9 @@
     "DataSourceCredentialDomain": "f083f329-af21-442c-be2f-ece649770b48.StreamAnalystics",
     "Serialization": {
         "Type": "CustomClr",
-        "SerializationProjectPath": "..\\adfPipelineRunDeserializer\\adfPipelineRunDeserializer.csproj",
-        "SerializationClassName": "adfPipelineRunDeserializer.adfPipelineRunDeserializer",
-        "SerializationDllPath": "adfPipelineRunDeserializer.dll"
+        "SerializationProjectPath": "..\\adfLogsCustomDeserializer\\adfLogsCustomDeserializer.csproj",
+        "SerializationClassName": "adfLogsCustomDeserializer.adfPipelineRunDeserializer",
+        "SerializationDllPath": "adfLogsCustomDeserializer.dll"
     },
     "PartitionKey": null,
     "ScriptType": "Input"
